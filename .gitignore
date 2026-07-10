@@ -1,0 +1,33 @@
+# ── Environment ──
+.env
+.env.*
+.env.local
+
+# ── Dependencies ──
+node_modules/
+
+# ── Build Output ──
+dist/
+.next/
+out/
+
+# ── Turbo ──
+.turbo/
+
+# ── IDE ──
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# ── OS ──
+.DS_Store
+Thumbs.db
+
+# ── Testing ──
+coverage/
+
+# ── Misc ──
+*.log
+*.tsbuildinfo
+packages/cli/tsup.config.bundled_*.mjs

@@ -1,0 +1,57 @@
+{
+  "name": "lootvm-ui",
+  "version": "0.1.1",
+  "description": "LootVM UI CLI — add components to your project",
+  "license": "MIT",
+  "type": "module",
+  "bin": {
+    "lootvm-ui": "./dist/index.js"
+  },
+  "files": [
+    "dist",
+    "registry",
+    "assets"
+  ],
+  "scripts": {
+    "prebuild": "tsx ../../scripts/build-cli-registry.ts && tsx ../../scripts/build-blocks-registry.ts",
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "lint": "eslint src/",
+    "typecheck": "tsc --noEmit",
+    "test": "echo \"No tests yet\"",
+    "clean": "rimraf dist"
+  },
+  "dependencies": {
+    "commander": "^13.1.0",
+    "picocolors": "^1.1.1"
+  },
+  "devDependencies": {
+    "@lootvm/eslint-config": "workspace:*",
+    "@lootvm/typescript-config": "workspace:*",
+    "@types/node": "^22.0.0",
+    "eslint": "^9.0.0",
+    "rimraf": "^6.0.0",
+    "tsup": "^8.4.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.8.0"
+  },
+  "engines": {
+    "node": ">=22.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sumariw4/lootvm-ui.git",
+    "directory": "packages/cli"
+  },
+  "keywords": [
+    "lootvm",
+    "ui",
+    "cli",
+    "components",
+    "tailwindcss",
+    "radix-ui"
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "name": "@lootvm/blocks",
+  "version": "0.1.0",
+  "description": "LootVM UI — Installable page blocks and templates",
+  "license": "MIT",
+  "type": "module",
+  "files": ["src", "index.json"],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sumariw4/lootvm-ui.git",
+    "directory": "packages/blocks"
+  }
+}

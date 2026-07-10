@@ -1,0 +1,81 @@
+{
+  "dashboard-01": {
+    "type": "block",
+    "description": "Dashboard with sidebar, KPI cards, revenue chart, and data table",
+    "category": "dashboard",
+    "files": [
+      { "source": "page.tsx", "target": "app/dashboard/page.tsx" },
+      { "source": "components/app-sidebar.tsx", "target": "components/blocks/dashboard/app-sidebar.tsx" },
+      { "source": "components/dashboard-header.tsx", "target": "components/blocks/dashboard/dashboard-header.tsx" },
+      { "source": "components/dashboard-shell.tsx", "target": "components/blocks/dashboard/dashboard-shell.tsx" },
+      { "source": "components/metric-cards.tsx", "target": "components/blocks/dashboard/metric-cards.tsx" },
+      { "source": "components/revenue-chart.tsx", "target": "components/blocks/dashboard/revenue-chart.tsx" },
+      { "source": "components/recent-sales-table.tsx", "target": "components/blocks/dashboard/recent-sales-table.tsx" }
+    ],
+    "registryDependencies": [
+      "button",
+      "card",
+      "table",
+      "badge",
+      "avatar",
+      "separator",
+      "input",
+      "tabs",
+      "sidebar",
+      "chart",
+      "breadcrumb"
+    ],
+    "npmDependencies": {
+      "recharts": "^2.15.0",
+      "lucide-react": "^0.475.0"
+    }
+  },
+  "layout-grid-01": {
+    "type": "block",
+    "description": "Sidebar layout with 3-column grid and wide bottom section",
+    "category": "layouts",
+    "files": [
+      { "source": "page.tsx", "target": "app/layout-grid-01/page.tsx" },
+      { "source": "components/layout-shell.tsx", "target": "components/blocks/layout/layout-shell.tsx" }
+    ],
+    "registryDependencies": ["card", "avatar", "sidebar"],
+    "npmDependencies": {
+      "lucide-react": "^0.475.0"
+    }
+  },
+  "layout-grid-02": {
+    "type": "block",
+    "description": "Sidebar layout with 6-card grid and full-width section",
+    "category": "layouts",
+    "files": [
+      { "source": "page.tsx", "target": "app/layout-grid-02/page.tsx" },
+      { "source": "components/layout-shell.tsx", "target": "components/blocks/layout-grid-02/layout-shell.tsx" }
+    ],
+    "registryDependencies": ["card", "avatar", "sidebar"],
+    "npmDependencies": {
+      "lucide-react": "^0.475.0"
+    }
+  },
+  "auth-login-centered": {
+    "type": "block",
+    "description": "Centered login page with social sign-in buttons",
+    "category": "authentication",
+    "files": [
+      { "source": "page.tsx", "target": "app/login/page.tsx" },
+      { "source": "components/login-form.tsx", "target": "components/blocks/auth/login-form-centered.tsx" }
+    ],
+    "registryDependencies": ["button", "card", "input", "label", "separator"],
+    "npmDependencies": {}
+  },
+  "auth-login-split": {
+    "type": "block",
+    "description": "Split login page with form and brand panel",
+    "category": "authentication",
+    "files": [
+      { "source": "page.tsx", "target": "app/login-split/page.tsx" },
+      { "source": "components/login-form.tsx", "target": "components/blocks/auth/login-form-split.tsx" }
+    ],
+    "registryDependencies": ["button", "card", "input", "label", "separator"],
+    "npmDependencies": {}
+  }
+}
