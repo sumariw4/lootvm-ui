@@ -412,6 +412,39 @@ export const COMPONENT_DOCS: Record<string, ComponentDoc> = {
   </Field>
 </Fieldset>`,
   },
+  textarea: {
+    imports: ["Field", "Label", "Textarea"],
+    usage: `<Field>
+  <Label htmlFor="bio">Bio</Label>
+  <Textarea id="bio" rows={4} placeholder="Tell us about yourself" />
+</Field>`,
+  },
+  combobox: {
+    imports: ["Combobox"],
+    usage: `<Combobox
+  mode="multi"
+  placeholder="Select tags"
+  options={[
+    { value: "react", label: "React" },
+    { value: "vue", label: "Vue" },
+  ]}
+  value={["react"]}
+  onChange={(v) => console.log(v)}
+/>`,
+  },
+  "file-upload": {
+    imports: ["FileUpload"],
+    usage: `<FileUpload
+  accept="image/*"
+  maxSize={5 * 1024 * 1024}
+  multiple
+  onChange={(files) => console.log(files)}
+/>`,
+  },
+  rating: {
+    imports: ["Rating"],
+    usage: `<Rating mode="nps" value={8} onChange={(v) => console.log(v)} labels={{ low: "Not likely", high: "Very likely" }} />`,
+  },
   "input-otp": {
     imports: ["InputOTP", "InputOTPGroup", "InputOTPSeparator", "InputOTPSlot"],
     usage: `<InputOTP maxLength={6}>

@@ -1,6 +1,6 @@
 {
   "name": "@lootvm/ui",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "LootVM UI — Component Library",
   "license": "MIT",
   "type": "module",
@@ -51,6 +51,26 @@
       "types": "./dist/components/input.d.ts",
       "import": "./dist/components/input.js",
       "require": "./dist/components/input.cjs"
+    },
+    "./textarea": {
+      "types": "./dist/components/textarea.d.ts",
+      "import": "./dist/components/textarea.js",
+      "require": "./dist/components/textarea.cjs"
+    },
+    "./combobox": {
+      "types": "./dist/components/combobox.d.ts",
+      "import": "./dist/components/combobox.js",
+      "require": "./dist/components/combobox.cjs"
+    },
+    "./file-upload": {
+      "types": "./dist/components/file-upload.d.ts",
+      "import": "./dist/components/file-upload.js",
+      "require": "./dist/components/file-upload.cjs"
+    },
+    "./rating": {
+      "types": "./dist/components/rating.d.ts",
+      "import": "./dist/components/rating.js",
+      "require": "./dist/components/rating.cjs"
     },
     "./label": {
       "types": "./dist/components/label.d.ts",
