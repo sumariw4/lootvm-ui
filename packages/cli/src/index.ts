@@ -2,13 +2,15 @@ import { Command } from "commander";
 import pc from "picocolors";
 import { runInit } from "./commands/init.js";
 import { listAllRegistryItems, runAdd } from "./commands/add.js";
+import { runMcpInit, type McpClient } from "./commands/mcp-init.js";
+import { startMcpServer } from "./mcp/server.js";
 
 const program = new Command();
 
 program
   .name("lootvm-ui")
   .description("LootVM UI CLI — add components to your project")
-  .version("0.1.0");
+  .version("0.1.4");
 
 program
   .command("init")
@@ -44,6 +46,33 @@ program
     console.log(components.join(", "));
     console.log(pc.cyan(`\nAvailable blocks (${blocks.length}):\n`));
     console.log(blocks.join(", "));
+  });
+
+const mcpCommand = program
+  .command("mcp")
+  .description("Model Context Protocol server for AI assistants")
+  .action(async () => {
+    await startMcpServer();
+  });
+
+mcpCommand
+  .command("init")
+  .description("Generate MCP config for Cursor, Claude, VS Code, or Codex")
+  .requiredOption("--client <client>", "cursor | claude | vscode | codex")
+  .action(async (options: { client: string }) => {
+    const client = options.client as McpClient;
+    const valid: McpClient[] = ["cursor", "claude", "vscode", "codex"];
+    if (!valid.includes(client)) {
+      console.error(pc.red(`Invalid client "${client}". Use: ${valid.join(", ")}`));
+      process.exit(1);
+    }
+
+    try {
+      await runMcpInit(client);
+    } catch (error) {
+      console.error(pc.red(error instanceof Error ? error.message : String(error)));
+      process.exit(1);
+    }
   });
 
 program.parse();

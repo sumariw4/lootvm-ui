@@ -176,8 +176,7 @@ async function addBlocks(blockSlugs: string[], config: ComponentsConfig, cwd: st
 export async function runAdd(components: string[], cwd: string = process.cwd()) {
   const configPath = path.join(cwd, CONFIG_FILENAME);
   if (!fs.existsSync(configPath)) {
-    console.error(pc.red(`Error: ${CONFIG_FILENAME} not found. Run \`npx lootvm-ui init\` first.`));
-    process.exit(1);
+    throw new Error(`${CONFIG_FILENAME} not found. Run \`npx lootvm-ui init\` first.`);
   }
 
   const config = JSON.parse(fs.readFileSync(configPath, "utf-8")) as ComponentsConfig;

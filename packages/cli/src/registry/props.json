@@ -1,0 +1,515 @@
+{
+  "accordion": {
+    "exports": [
+      "Accordion",
+      "AccordionContent",
+      "AccordionItem",
+      "AccordionTrigger"
+    ],
+    "props": {}
+  },
+  "alert-dialog": {
+    "exports": [
+      "AlertDialog",
+      "AlertDialogAction",
+      "AlertDialogCancel",
+      "AlertDialogContent",
+      "AlertDialogDescription",
+      "AlertDialogFooter",
+      "AlertDialogHeader",
+      "AlertDialogOverlay",
+      "AlertDialogPortal",
+      "AlertDialogTitle",
+      "AlertDialogTrigger"
+    ],
+    "props": {}
+  },
+  "avatar": {
+    "exports": [
+      "Avatar",
+      "AvatarFallback",
+      "AvatarImage"
+    ],
+    "props": {}
+  },
+  "badge": {
+    "exports": [
+      "Badge",
+      "badgeVariants"
+    ],
+    "props": {},
+    "interfaces": {
+      "BadgeProps": "export interface BadgeProps\n  extends React.HTMLAttributes<HTMLDivElement>,\n    VariantProps<typeof badgeVariants> {}"
+    }
+  },
+  "breadcrumb": {
+    "exports": [
+      "Breadcrumb",
+      "BreadcrumbItem",
+      "BreadcrumbLink",
+      "BreadcrumbList",
+      "BreadcrumbPage",
+      "BreadcrumbSeparator"
+    ],
+    "props": {}
+  },
+  "button": {
+    "exports": [
+      "Button",
+      "buttonVariants"
+    ],
+    "props": {
+      "asChild": "boolean",
+      "isLoading": "boolean"
+    },
+    "interfaces": {
+      "ButtonProps": "export interface ButtonProps\n  extends React.ButtonHTMLAttributes<HTMLButtonElement>,\n    VariantProps<typeof buttonVariants> {\n  /** Meneruskan semua props ke child element via Radix Slot */\n  asChild?: boolean;\n  /** Menampilkan spinner dan menonaktifkan interaksi */\n  isLoading?: boolean;\n}"
+    },
+    "notes": [
+      "Default variant is 'primary', not shadcn 'default'"
+    ]
+  },
+  "calendar": {
+    "exports": [
+      "Calendar"
+    ],
+    "props": {}
+  },
+  "card": {
+    "exports": [
+      "Card",
+      "CardContent",
+      "CardDescription",
+      "CardFooter",
+      "CardHeader",
+      "CardTitle"
+    ],
+    "props": {}
+  },
+  "carousel": {
+    "exports": [
+      "Carousel",
+      "CarouselApi",
+      "CarouselContent",
+      "CarouselItem",
+      "CarouselNext",
+      "CarouselPrevious"
+    ],
+    "props": {}
+  },
+  "chart": {
+    "exports": [
+      "ChartConfig",
+      "ChartContainer",
+      "ChartStyle",
+      "ChartTooltip",
+      "ChartTooltipContent"
+    ],
+    "props": {}
+  },
+  "checkbox": {
+    "exports": [
+      "Checkbox"
+    ],
+    "props": {}
+  },
+  "collapsible": {
+    "exports": [
+      "Collapsible",
+      "CollapsibleContent",
+      "CollapsibleTrigger"
+    ],
+    "props": {}
+  },
+  "command": {
+    "exports": [
+      "Command",
+      "CommandDialog",
+      "CommandEmpty",
+      "CommandGroup",
+      "CommandInput",
+      "CommandItem",
+      "CommandList",
+      "CommandSeparator",
+      "CommandShortcut"
+    ],
+    "props": {}
+  },
+  "context-menu": {
+    "exports": [
+      "ContextMenu",
+      "ContextMenuCheckboxItem",
+      "ContextMenuContent",
+      "ContextMenuGroup",
+      "ContextMenuItem",
+      "ContextMenuLabel",
+      "ContextMenuPortal",
+      "ContextMenuRadioGroup",
+      "ContextMenuRadioItem",
+      "ContextMenuSeparator",
+      "ContextMenuShortcut",
+      "ContextMenuSub",
+      "ContextMenuSubContent",
+      "ContextMenuSubTrigger",
+      "ContextMenuTrigger"
+    ],
+    "props": {}
+  },
+  "dialog": {
+    "exports": [
+      "Dialog",
+      "DialogClose",
+      "DialogContent",
+      "DialogDescription",
+      "DialogFooter",
+      "DialogHeader",
+      "DialogOverlay",
+      "DialogPortal",
+      "DialogTitle",
+      "DialogTrigger"
+    ],
+    "props": {}
+  },
+  "drawer": {
+    "exports": [
+      "Drawer",
+      "DrawerClose",
+      "DrawerContent",
+      "DrawerDescription",
+      "DrawerFooter",
+      "DrawerHeader",
+      "DrawerOverlay",
+      "DrawerPortal",
+      "DrawerTitle",
+      "DrawerTrigger"
+    ],
+    "props": {}
+  },
+  "dropdown-menu": {
+    "exports": [
+      "DropdownMenu",
+      "DropdownMenuCheckboxItem",
+      "DropdownMenuContent",
+      "DropdownMenuGroup",
+      "DropdownMenuItem",
+      "DropdownMenuLabel",
+      "DropdownMenuPortal",
+      "DropdownMenuRadioGroup",
+      "DropdownMenuRadioItem",
+      "DropdownMenuSeparator",
+      "DropdownMenuShortcut",
+      "DropdownMenuSub",
+      "DropdownMenuSubContent",
+      "DropdownMenuSubTrigger",
+      "DropdownMenuTrigger"
+    ],
+    "props": {}
+  },
+  "field": {
+    "exports": [
+      "Field",
+      "FieldDescription",
+      "FieldError",
+      "FieldLabel",
+      "useField"
+    ],
+    "props": {
+      "error": "boolean"
+    },
+    "interfaces": {
+      "FieldProps": "export interface FieldProps extends React.HTMLAttributes<HTMLDivElement> {\n  error?: boolean;\n}"
+    }
+  },
+  "fieldset": {
+    "exports": [
+      "Fieldset",
+      "FieldsetLegend"
+    ],
+    "props": {}
+  },
+  "form": {
+    "exports": [
+      "Form",
+      "FormControl",
+      "FormDescription",
+      "FormField",
+      "FormItem",
+      "FormLabel",
+      "FormMessage",
+      "useFormField"
+    ],
+    "props": {}
+  },
+  "hover-card": {
+    "exports": [
+      "HoverCard",
+      "HoverCardContent",
+      "HoverCardTrigger"
+    ],
+    "props": {}
+  },
+  "input-otp": {
+    "exports": [
+      "InputOTP",
+      "InputOTPGroup",
+      "InputOTPSeparator",
+      "InputOTPSlot"
+    ],
+    "props": {}
+  },
+  "input": {
+    "exports": [
+      "Input"
+    ],
+    "props": {
+      "error": "boolean"
+    },
+    "interfaces": {
+      "InputProps": "export interface InputProps\n  extends React.InputHTMLAttributes<HTMLInputElement> {\n  error?: boolean;\n}"
+    }
+  },
+  "label": {
+    "exports": [
+      "Label"
+    ],
+    "props": {}
+  },
+  "menubar": {
+    "exports": [
+      "Menubar",
+      "MenubarCheckboxItem",
+      "MenubarContent",
+      "MenubarGroup",
+      "MenubarItem",
+      "MenubarLabel",
+      "MenubarMenu",
+      "MenubarPortal",
+      "MenubarRadioGroup",
+      "MenubarRadioItem",
+      "MenubarSeparator",
+      "MenubarShortcut",
+      "MenubarSub",
+      "MenubarSubContent",
+      "MenubarSubTrigger",
+      "MenubarTrigger"
+    ],
+    "props": {}
+  },
+  "navigation-menu": {
+    "exports": [
+      "NavigationMenu",
+      "NavigationMenuContent",
+      "NavigationMenuIndicator",
+      "NavigationMenuItem",
+      "NavigationMenuLink",
+      "NavigationMenuList",
+      "NavigationMenuTrigger",
+      "NavigationMenuViewport",
+      "navigationMenuTriggerStyle"
+    ],
+    "props": {}
+  },
+  "pagination": {
+    "exports": [
+      "Pagination",
+      "PaginationContent",
+      "PaginationEllipsis",
+      "PaginationItem",
+      "PaginationLink",
+      "PaginationNext",
+      "PaginationPrevious"
+    ],
+    "props": {}
+  },
+  "popover": {
+    "exports": [
+      "Popover",
+      "PopoverContent",
+      "PopoverTrigger"
+    ],
+    "props": {}
+  },
+  "progress": {
+    "exports": [
+      "Progress"
+    ],
+    "props": {}
+  },
+  "radio-group": {
+    "exports": [
+      "RadioGroup",
+      "RadioGroupItem"
+    ],
+    "props": {}
+  },
+  "radio": {
+    "exports": [
+      "RadioGroup",
+      "RadioGroupItem"
+    ],
+    "props": {}
+  },
+  "resizable": {
+    "exports": [
+      "ResizableHandle",
+      "ResizablePanel",
+      "ResizablePanelGroup"
+    ],
+    "props": {}
+  },
+  "scroll-area": {
+    "exports": [
+      "ScrollArea",
+      "ScrollBar"
+    ],
+    "props": {}
+  },
+  "select": {
+    "exports": [
+      "Select",
+      "SelectContent",
+      "SelectGroup",
+      "SelectItem",
+      "SelectLabel",
+      "SelectScrollDownButton",
+      "SelectScrollUpButton",
+      "SelectSeparator",
+      "SelectTrigger",
+      "SelectValue"
+    ],
+    "props": {}
+  },
+  "separator": {
+    "exports": [
+      "Separator"
+    ],
+    "props": {}
+  },
+  "sheet": {
+    "exports": [
+      "Sheet",
+      "SheetClose",
+      "SheetContent",
+      "SheetDescription",
+      "SheetFooter",
+      "SheetHeader",
+      "SheetOverlay",
+      "SheetPortal",
+      "SheetTitle",
+      "SheetTrigger"
+    ],
+    "props": {}
+  },
+  "sidebar": {
+    "exports": [
+      "Sidebar",
+      "SidebarContent",
+      "SidebarFooter",
+      "SidebarGroup",
+      "SidebarGroupLabel",
+      "SidebarHeader",
+      "SidebarInset",
+      "SidebarMenu",
+      "SidebarMenuButton",
+      "SidebarMenuItem",
+      "SidebarProvider",
+      "useSidebar"
+    ],
+    "props": {}
+  },
+  "slider": {
+    "exports": [
+      "Slider"
+    ],
+    "props": {}
+  },
+  "switch": {
+    "exports": [
+      "Switch"
+    ],
+    "props": {}
+  },
+  "table": {
+    "exports": [
+      "Table",
+      "TableBody",
+      "TableCaption",
+      "TableCell",
+      "TableFooter",
+      "TableHead",
+      "TableHeader",
+      "TableRow"
+    ],
+    "props": {}
+  },
+  "tabs": {
+    "exports": [
+      "Tabs",
+      "TabsContent",
+      "TabsList",
+      "TabsTrigger"
+    ],
+    "props": {}
+  },
+  "toast": {
+    "exports": [
+      "Toast",
+      "ToastAction",
+      "ToastActionElement",
+      "ToastClose",
+      "ToastDescription",
+      "ToastProvider",
+      "ToastTitle",
+      "ToastViewport"
+    ],
+    "props": {}
+  },
+  "toaster": {
+    "exports": [
+      "Toaster"
+    ],
+    "props": {}
+  },
+  "toggle-group": {
+    "exports": [
+      "ToggleGroup",
+      "ToggleGroupItem"
+    ],
+    "props": {}
+  },
+  "toggle": {
+    "exports": [
+      "Toggle",
+      "toggleVariants"
+    ],
+    "props": {}
+  },
+  "toolbar": {
+    "exports": [
+      "Toolbar",
+      "ToolbarButton",
+      "ToolbarLink",
+      "ToolbarSeparator",
+      "ToolbarToggleGroup",
+      "ToolbarToggleItem"
+    ],
+    "props": {}
+  },
+  "tooltip": {
+    "exports": [
+      "Tooltip",
+      "TooltipContent",
+      "TooltipProvider",
+      "TooltipTrigger"
+    ],
+    "props": {}
+  },
+  "use-toast": {
+    "exports": [
+      "reducer",
+      "toast",
+      "useToast"
+    ],
+    "props": {}
+  }
+}
