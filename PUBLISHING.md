@@ -23,9 +23,20 @@
 | Package | npm name | Published |
 |---|---|---|
 | `packages/ui` | `@lootvm/ui` | ✅ Yes |
-| `packages/cli` | `lootvm-ui` | ⏳ Pending republish |
+| `packages/cli` | `lootvm-ui` | ✅ Yes |
+| `packages/registry-docs` | `@lootvm/registry-docs` | ✅ Yes |
 | `packages/blocks` | `@lootvm/blocks` | ❌ No (private, embedded in CLI) |
 | `packages/config/*` | — | ❌ No (private, internal configs) |
+
+### npm README requirement
+
+Each publishable package must have a `README.md` in its package directory **and** include `"README.md"` in the `files` field of `package.json`. npm reads the README from the package tarball, not from the monorepo root.
+
+| Package | README location |
+|---|---|
+| `@lootvm/ui` | `packages/ui/README.md` |
+| `lootvm-ui` | `packages/cli/README.md` |
+| `@lootvm/registry-docs` | `packages/registry-docs/README.md` |
 
 ## Versioning rules
 

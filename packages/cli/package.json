@@ -1,6 +1,6 @@
 {
   "name": "lootvm-ui",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "LootVM UI CLI — add components to your project",
   "license": "MIT",
   "type": "module",
@@ -11,8 +11,13 @@
     "dist",
     "registry",
     "assets",
-    "src/registry"
+    "src/registry",
+    "README.md"
   ],
+  "homepage": "https://github.com/sumariw4/lootvm-ui#readme",
+  "bugs": {
+    "url": "https://github.com/sumariw4/lootvm-ui/issues"
+  },
   "scripts": {
     "prepublishOnly": "pnpm prebuild && pnpm build",
     "prebuild": "tsx ../../scripts/build-cli-registry.ts && tsx ../../scripts/build-blocks-registry.ts && tsx ../../scripts/extract-component-props.ts",

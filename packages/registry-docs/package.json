@@ -1,6 +1,6 @@
 {
   "name": "@lootvm/registry-docs",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "LootVM UI — component usage docs for docs site and MCP",
   "license": "MIT",
   "type": "module",
@@ -14,7 +14,19 @@
   },
   "files": [
     "dist",
-    "src"
+    "src",
+    "README.md"
+  ],
+  "homepage": "https://github.com/sumariw4/lootvm-ui#readme",
+  "bugs": {
+    "url": "https://github.com/sumariw4/lootvm-ui/issues"
+  },
+  "keywords": [
+    "lootvm",
+    "registry",
+    "docs",
+    "components",
+    "ui"
   ],
   "scripts": {
     "build": "tsup",

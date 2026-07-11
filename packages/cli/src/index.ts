@@ -10,7 +10,7 @@ const program = new Command();
 program
   .name("lootvm-ui")
   .description("LootVM UI CLI — add components to your project")
-  .version("0.1.4");
+  .version("0.1.5");
 
 program
   .command("init")
