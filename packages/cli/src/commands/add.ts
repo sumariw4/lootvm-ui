@@ -35,12 +35,22 @@ type BlockEntry = {
 const registryMap = registry as Record<string, RegistryEntry>;
 const blocksMap = blocksRegistry as Record<string, BlockEntry>;
 
+/** Docs-friendly slugs that differ from registry keys. */
+const SLUG_ALIASES: Record<string, string> = {
+  "radio-group": "radio",
+};
+
+function resolveSlug(slug: string): string {
+  return SLUG_ALIASES[slug] ?? slug;
+}
+
 function getCliRoot(): string {
   return path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 }
 
 function getRegistryComponentPath(slug: string): string {
-  const entry = registryMap[slug];
+  const resolved = resolveSlug(slug);
+  const entry = registryMap[resolved];
   if (!entry) {
     throw new Error(`Component "${slug}" not found in registry.`);
   }
@@ -53,7 +63,7 @@ function getBlockSourcePath(slug: string, source: string): string {
 
 function resolveComponentTree(slug: string): string[] {
   const resolved = new Set<string>();
-  const queue = [slug];
+  const queue = [resolveSlug(slug)];
 
   while (queue.length > 0) {
     const current = queue.shift()!;
@@ -182,7 +192,7 @@ export async function runAdd(components: string[], cwd: string = process.cwd()) 
           componentSlugs.add(slug);
         }
       }
-    } else if (registryMap[item]) {
+    } else if (registryMap[resolveSlug(item)]) {
       for (const slug of resolveComponentTree(item)) {
         componentSlugs.add(slug);
       }
