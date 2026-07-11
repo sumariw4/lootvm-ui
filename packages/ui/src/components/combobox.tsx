@@ -87,6 +87,17 @@ function Combobox({
     onChange?.(current.filter((v) => v !== optionValue));
   };
 
+  const handleRemoveKeyDown = (
+    event: React.KeyboardEvent<HTMLSpanElement>,
+    optionValue: string,
+  ) => {
+    if (event.key === "Enter" || event.key === " ") {
+      event.preventDefault();
+      event.stopPropagation();
+      removeValue(optionValue);
+    }
+  };
+
   return (
     <Popover open={open} onOpenChange={setOpen}>
       <PopoverTrigger asChild>
@@ -112,17 +123,19 @@ function Combobox({
                 return (
                   <Badge key={val} variant="secondary" className="gap-1">
                     {label}
-                    <button
-                      type="button"
-                      className="rounded-full outline-none hover:bg-muted"
+                    <span
+                      role="button"
+                      tabIndex={0}
+                      className="cursor-pointer rounded-full outline-none hover:bg-muted focus-visible:ring-1 focus-visible:ring-ring"
                       onClick={(e) => {
                         e.stopPropagation();
                         removeValue(val!);
                       }}
+                      onKeyDown={(e) => handleRemoveKeyDown(e, val!)}
                       aria-label={`Remove ${label}`}
                     >
-                      <X className="size-3" />
-                    </button>
+                      <X className="size-3" aria-hidden="true" />
+                    </span>
                   </Badge>
                 );
               })
