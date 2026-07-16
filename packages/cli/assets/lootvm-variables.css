@@ -34,6 +34,8 @@
   --chart-5: #FF4444;
   --sidebar: #F5F5F5;
   --sidebar-foreground: #0A0A0A;
+  --sidebar-primary: #0A0A0A;
+  --sidebar-primary-foreground: #FAFAFA;
   --sidebar-accent: #E8E8E8;
   --sidebar-accent-foreground: #0A0A0A;
   --sidebar-border: rgba(0, 0, 0, 0.08);
@@ -75,6 +77,8 @@
   --chart-5: #FF4444;
   --sidebar: #111111;
   --sidebar-foreground: #FFFFFF;
+  --sidebar-primary: #FFFFFF;
+  --sidebar-primary-foreground: #0A0A0A;
   --sidebar-accent: #1C1C1C;
   --sidebar-accent-foreground: #FFFFFF;
   --sidebar-border: rgba(255, 255, 255, 0.06);

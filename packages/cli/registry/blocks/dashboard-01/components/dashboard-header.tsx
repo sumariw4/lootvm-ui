@@ -8,30 +8,26 @@ import {
   BreadcrumbPage,
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Search } from "lucide-react";
+import { Separator } from "@/components/ui/separator";
+import { SidebarTrigger } from "@/components/ui/sidebar";
 
 export function DashboardHeader() {
   return (
-    <header className="flex h-14 shrink-0 items-center gap-4 border-b border-border px-6">
-      <Breadcrumb>
-        <BreadcrumbList>
-          <BreadcrumbItem>
-            <BreadcrumbLink href="#">Home</BreadcrumbLink>
-          </BreadcrumbItem>
-          <BreadcrumbSeparator />
-          <BreadcrumbItem>
-            <BreadcrumbPage>Dashboard</BreadcrumbPage>
-          </BreadcrumbItem>
-        </BreadcrumbList>
-      </Breadcrumb>
-      <div className="ml-auto flex items-center gap-3">
-        <div className="relative hidden md:block">
-          <Search className="absolute left-2.5 top-2.5 size-4 text-muted-foreground" />
-          <Input placeholder="Search..." className="w-64 pl-8" />
-        </div>
-        <Button size="sm">Create Account</Button>
+    <header className="flex h-16 shrink-0 items-center gap-2 transition-[width,height] ease-linear group-has-data-[collapsible=icon]/sidebar-wrapper:h-12">
+      <div className="flex items-center gap-2 px-4">
+        <SidebarTrigger className="-ml-1" />
+        <Separator orientation="vertical" className="mr-2 h-4" />
+        <Breadcrumb>
+          <BreadcrumbList>
+            <BreadcrumbItem className="hidden md:block">
+              <BreadcrumbLink href="#">Home</BreadcrumbLink>
+            </BreadcrumbItem>
+            <BreadcrumbSeparator className="hidden md:block" />
+            <BreadcrumbItem>
+              <BreadcrumbPage>Dashboard</BreadcrumbPage>
+            </BreadcrumbItem>
+          </BreadcrumbList>
+        </Breadcrumb>
       </div>
     </header>
   );
